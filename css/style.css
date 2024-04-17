@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+/* reset css */
+body, ul, ol, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl ,dd{
+	margin: 0px;
+	padding: 0px;
+}
+h1{
+	font-size: 16px;
+}
+ul, ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+img{
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+body {
+	font-family: "Roboto", "Noto Sans KR", sans-serif;
+	font-size: 1em;
+}
+body.fixed { /*스크롤 없애기*/
+	overflow-y: hidden;
+}
+/* .start{
+	height: 100vh;
+} */
+.start .top{
+	/* position: fixed; */
+	width: 100%;
+	/* background-color: transparent; */
+	color: #000;
+	/* transition: 0.3s; */
+}
+/* .start .top.fixed {
+	background-color: #09f;
+	color: #000;
+} */
+.start .top .logo h1{
+	position: relative;
+	width: 200px;
+	height: 100px;
+	background-color: #e60012;
+	text-align: center;
+	z-index: 9999;
+}
+.start .top .logo h1 a{
+	display: inline-block;
+	width: 190px;
+	height: 74px;
+	background: url(../img/logo_nintendo_red.gif)no-repeat center center;
+	fill: #fff;
+	font-size: 0;
+	text-indent: -99999;
+}
+.start .top .top_inner { /**/
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 7vw;
+	height: 83px;
+	box-sizing: border-box;
+}
+
+.start .top .right{
+	display: flex;
+	position: relative;
+}
+.start .top .right .switch{
+	position: absolute;
+	right: -50px;
+	top: -12px;
+}
+.start .top .right .switch img{
+	height: 74px;
+}
+.start .top .right #PC{
+	margin-right: 50px;
+}
+.start .top .right #PC ul{
+	display: flex;
+}
+
+.start .top .right #PC ul li a{
+	display: block;
+	padding: 0 12px;
+	line-height: 60px;
+	color: #e60012;
+}
+.start .top .right #PC ul li:hover a{
+	color: #000;
+}
+.start .top .right #Mobile{
+	display: none;
+	justify-content: left;
+	align-items: center;
+	position: fixed;
+	padding: 200PX 0;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100vh;
+	background-color: #222;
+}
+.start .top .right #Mobile.active{
+	display: flex;
+}
+.start .top .right #Mobile ul{
+	margin: 0 auto;
+	width: 70%;
+	background-color: #222;
+	display: flex;
+	flex-direction: column;
+}
+.start .top .right #Mobile ul li{
+	border: 2px solid #333;
+	border-left: none;
+	border-right: none;
+}
+.start .top .right #Mobile ul li a{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 20px;
+	text-decoration: none;
+	color: #fff;
+}
+#tab{
+	position: absolute;
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	z-index: 1000;
+	width: 31px;
+	height: 26px;
+	transform: translateY(-50%);
+	text-align: -9999px;
+	overflow: hidden;
+}
+#tab.open{
+	background: url(../img/menu.png) no-repeat;
+	background-size: contain;
+}
+#tab.close{
+	background: url(../img/close-red.png)no-repeat;
+	background-size: contain;
+}
+.slider{
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+}
+.slider img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.slider a .keytext{ /**/
+	position: absolute;
+	left: 20px;
+	bottom: 50px;
+	line-height: 30px;
+	z-index: 99999;
+}
+.slider a .keytext h2{
+	line-height: 1;
+	font-size: 1em;
+	font-weight: 300;
+	color: #000;
+}
+.slider a .keytext h2 span{
+	font-size: 2em;
+	font-weight: 600;
+}
+/* section */
+section{ /**/
+	/* margin-top: 120px; */
+	padding: 80px 0;
+	background: url(../img/background.png);
+	background-size: cover;
+}
+section .mid{
+	width: 90%;
+	margin: 0 auto;
+}
+section .mid .title{
+	display: flex;
+	justify-content: center;
+}
+section .mid .title h2{
+	font-size: 1.063em;
+	font-weight: 400;
+	color: #333;
+	text-align: center;
+}
+section .mid .title span{
+	font-size: 2em;
+	font-weight: 600;
+	color: #000;
+	text-align: center;
+}
+section .mid .banner{
+	margin: 0 auto;
+	margin-top: 50px;
+}
+section .mid .banner ul{
+	display: flex;
+	justify-content: space-between;
+	/* flex-wrap: wrap; */
+}section .mid .banner ul li{
+	width: calc((100% - 50px)/3);
+}
+section .mid .banner ul li a img{
+	width: 100%;
+}
+section .mid .banner ul li a .box{
+	position: relative;
+	margin: 0 auto;
+	margin-top: -20px;
+	background-color: #fff;
+	border: 4px solid #694eaa;	
+	box-sizing: border-box;
+}
+section .mid .banner ul li a .number{
+	position: absolute;
+	top: -20px;
+	left: 10px;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	background-color: #694eaa;
+	color: #fff;
+	font-size: 1em;
+	font-weight: 600;
+	text-align: center;
+}
+section .mid .banner ul li a .box{
+	padding: 20px 15px;
+	text-align: left;
+}
+section .mid .banner ul li a .box h3{
+	font-size: 1.219em;
+	font-weight: 600;
+	color: #000;
+}
+section .mid .banner ul li a .box p{
+	font-size: 0.813em;
+	font-weight: 400;
+	color: #555;
+}
+section .mid .banner li:nth-child(2n){
+	margin-top: 30px;
+}
+section .mid .banner li:last-child{
+	margin-top: 30px;
+}
+@media only screen and (max-width: 1100px) {
+	.start .top .right nav{
+		display: none;
+	}
+	.start .top .right .switch{
+		margin-right: 50px;
+	}
+	#tab{
+		display: block;
+	}
+	.slider a .keytext{
+		display: none;
+	}
+	section .mid .banner ul {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+@media only screen and (max-width: 500px) {
+	section .mid .banner ul li a .box h3{
+		font-size: 0.875em;
+	}
+	section .mid .banner ul li a .box p{
+		display: none;
+		/* white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;		 */
+	}
+}
+
+

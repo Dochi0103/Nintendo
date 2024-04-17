@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Nintendo</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	let winw;
+	$(window).resize(function(){
+		winw=$(window).width();
+		if(winw>1020){
+			if($("#tab").hasClass("close")=== true){
+				$("body").removeClass("fixed");
+				$("#Mobile").removeClass("active");
+				$("#tab").removeAttr("class");
+				$("#tab").addClass("open");
+				
+			}
+		}
+	});
+	$("#tab").click(function(e){
+		e.preventDefault();
+		if($(this).hasClass("open") === true){
+			$(this).removeAttr("class");
+			$("#Mobile").slideDown(300);
+			$("body").addClass("fixed");
+			$(this).addClass("close");
+		}
+		else{
+			$(this).removeAttr("class");
+			$(this).addClass("open");
+			$("#Mobile").slideUp(300);
+			$("body").removeClass("fixed");
+		}
+	});
+});
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="start">
+		<div class="top">
+			<div class="top_inner">
+				<div class="logo"><h1><a href="">logo</a></h1></div>
+				<div class="right">
+					<nav id="PC">
+						<ul>
+							<li><a href="">본체 및 amiibo</a></li>
+							<li><a href="">소프트웨어</a></li>
+							<li><a href="">News</a></li>
+							<li><a href="">캐릭터</a></li>
+							<li><a href="">고객지원</a></li>
+							<li><a href="">온라인 스토어</a></li>
+						</ul>
+					</nav>
+					<nav id="Mobile">
+						<ul>
+							<li><a href="">본체 및 amiibo</a></li>
+							<li><a href="">소프트웨어</a></li>
+							<li><a href="">News</a></li>
+							<li><a href="">캐릭터</a></li>
+							<li><a href="">고객지원</a></li>
+							<li><a href="">온라인 스토어</a></li>
+						</ul>
+					</nav>
+						<div class="switch"><a href="" class="tab"><img src="img/logo_switch_redBox.gif" alt="menu"></a></div>
+						<a href="" id="tab" class="open"></a>	
+				</div>
+			</div>
+		</div>
+		<div class="slider">
+			<a href="">
+				<div class="keytext">
+					<h2><span>Nintendo</span> Putting Smiles on the Faces of Everyone Nintendo Touches There's no play like it</h2>
+				</div>
+			</a>
+			<img src="img/mainslider.webp" alt="main">
+		</div>
+	</div>
+	<section>
+		<div class="mid">
+			<div class="title">
+				<h2>News & Update<br><span>새롭게 알려 드립니다.</span></h2> 
+			</div>
+			<div class="banner">
+					<ul>
+						<li>
+							<a href="">
+								<div class="photo"><img src="img/banner.webp" alt="banner-1"></div>
+								<div class="desc">
+									<div class="box">
+										<div class="number">01</div>
+										<h3>포켓몬스터스칼렛ㆍ바이올렛</h3><br><p>드넓은 세계에서 펼처지는 새로운 포켓몬과의 만남! <br> 월드로 풍부하게 표현된 세계를 자유롭게 모험하자!</p>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="photo"><img src="img/banner2.webp" alt="banner-2"></div>
+								<div class="desc">
+									<div class="box">
+										<div class="number">02</div>
+										<h3>Nintendo Switch Sports</h3><br><p>가족 및 친구와 팀을 만들어 전 세계 라이벌에 도전하거나 언제든 누구와도 스포츠를 즐길 수 있습니다.</p>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="photo"><img src="img/banner5.webp" alt="banner-3"></div>
+								<div class="desc">
+									<div class="box">
+										<div class="number">03</div>
+										<h3>젤다의 전설 브레스 오브 더 와일드</h3><br><p>대재앙이라고 불리는 재해가 일어나 하이랄 왕국은 멸망했다. 그로부터 100년후.. 주인공 링크는 지하 유적에서 오랜잠으로 부터 깨어나 대지로 발을 내딛는다.</p>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+			</div>
+		</div>
+	</section>
+</div>
+</body>
+</html>
